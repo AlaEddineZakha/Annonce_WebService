@@ -45,7 +45,7 @@ public class AnnonceController {
 
 
     @PutMapping("/{id}/edit")
-    public ResponseEntity<?> updateDestination(@PathVariable int id, @RequestBody Annonce annonce)
+    public ResponseEntity<?> updateAnnonce(@PathVariable int id, @RequestBody Annonce annonce)
     {
         return annonceService.updateAnnonce(id,annonce);
     }

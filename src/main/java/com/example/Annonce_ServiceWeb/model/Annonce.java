@@ -9,6 +9,7 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 import java.util.Collection;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Getter
@@ -48,7 +49,11 @@ public class Annonce {
 
     //private int trash;
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "annonce")
-    private Collection<Commentaire> commentaire;
+    // il affiche les commentaires lié a cette annonce mais
+    // chaqune de ce commentaires il contien liste user et liste annonce
+    // => Boucle infiné
+
+    /*@OneToMany(fetch = FetchType.LAZY, mappedBy = "annonce")
+    private List<Commentaire> commentaire;*/
 
 }

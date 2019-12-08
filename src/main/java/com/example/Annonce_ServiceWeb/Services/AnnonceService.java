@@ -46,7 +46,7 @@ public class AnnonceService {
 
     }
 
-    public List<Annonce> getAnnonces(){
+    public List<Annonce> getAnnonces() {
         return annonceRepository.findAll();
     }
 
